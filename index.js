@@ -4,6 +4,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
     casoEmergencia();
     experienciaConMaterialRadiactivo();
     comerDonas();
+    mostrarPuestoDeTrabajo();
 });
 let conteoDelPuntaje = 0;
 function calcularAñosDeExperiencia() {
@@ -27,4 +28,16 @@ function comerDonas(){
     const donasComidas = document.getElementById("donas").value;
     conteoDelPuntaje -= donasComidas
     console.log(`total excluyendo las donas comidas ${conteoDelPuntaje}`)
+}
+function mostrarPuestoDeTrabajo(){
+    const seccionFormulario = document.querySelector("#form");
+    seccionFormulario.style.display = 'none';
+
+   const puntajeFinal = Math.floor(conteoDelPuntaje)
+   const puesto = document.getElementById("respuesta-del-puesto")
+//    puesto.style.display = 'block';
+   if(puntajeFinal <= 15) puesto.innerText = "El puesto que te corresponde es el de MANTENIMIENTO.";
+   if(puntajeFinal >= 16 && puntajeFinal <= 25) puesto.innerText = "El puesto que te corresponde es el de OPERATIVO.";
+   if(puntajeFinal >= 26 && puntajeFinal <= 35) puesto.innerText = "El puesto que te corresponde es el de TECNICO.";
+   if(puntajeFinal >= 36) puesto.innerText = "El puesto que te corresponde es el de INGENIERO."
 }
