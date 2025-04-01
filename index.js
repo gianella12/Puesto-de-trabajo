@@ -2,6 +2,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
     event.preventDefault(); // Evita que la página se recargue
     calcularAñosDeExperiencia();
     casoEmergencia();
+    experienciaConMaterialRadiactivo();
 });
 let conteoDelPuntaje = 0;
 function calcularAñosDeExperiencia() {
@@ -18,3 +19,7 @@ function casoEmergencia() {
     if (document.getElementById("dormir").checked) conteoDelPuntaje += 0;
     console.log(conteoDelPuntaje)
 };
+function experienciaConMaterialRadiactivo(){
+    if(document.getElementById("material-radiactivo").checked) conteoDelPuntaje += 10;
+    console.log(`total con experiencia: ${conteoDelPuntaje}`)
+}
