@@ -25,8 +25,8 @@
     <section id="seccion-material-radiactivo">
         <fieldset>
          <legend>¿Trabajaste con material radiactivo?</legend>
-         <span>Si</span>
-         <input type="checkbox" id="material-radiactivo">
+         <label><input type="radio" id="material-radiactivo" name="material" value="si">Si</label>
+         <label><input type="radio" id="material-radiactivo" name="material" value="no">No</label>
         </fieldset>
     </section>      
     <section id="seccion-donas">
@@ -38,7 +38,7 @@
     <button type="submit">Enviar</button>
 </form>
 <div>
-    <p id="respuesta-del-puesto">dddddddddd</p>
+    <p id="respuesta-del-puesto"></p>
 </div>
 </body>
 <script src="./index.js"></script>
