@@ -8,21 +8,20 @@ document.querySelector("form").addEventListener("submit", function (event) {
 let conteoDelPuntaje = 0;
 function calcularAñosDeExperiencia() {
     const experiencia = parseInt(document.getElementById("experiencia").value);
-    console.log(`experiencia: ${experiencia}`)
+    console.log(`experiencia en meses: ${experiencia}`)
     const totalExperiencia = Math.floor(experiencia / 12);
     conteoDelPuntaje += totalExperiencia;
-    console.log(`total experiencia ${conteoDelPuntaje}`)
+    console.log(`total de experiencia en años ${conteoDelPuntaje}`)
 };
 function casoEmergencia() {
     if (document.getElementById("protocolo").checked) conteoDelPuntaje += 15;
     if (document.getElementById("correr").checked) conteoDelPuntaje += 10;
     if (document.getElementById("saltar").checked) conteoDelPuntaje += 5;
     if (document.getElementById("dormir").checked) conteoDelPuntaje += 0;
-    console.log(conteoDelPuntaje)
 };
 function experienciaConMaterialRadiactivo(){
     if(document.getElementById("material-radiactivo").checked) conteoDelPuntaje += 10;
-    console.log(`total con experiencia: ${conteoDelPuntaje}`)
+    console.log(`total con experiencia en material radiactivo: ${conteoDelPuntaje}`)
 }
 function comerDonas(){
     const donasComidas = document.getElementById("donas").value;
