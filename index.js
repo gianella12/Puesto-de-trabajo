@@ -3,6 +3,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
     calcularAñosDeExperiencia();
     casoEmergencia();
     experienciaConMaterialRadiactivo();
+    comerDonas();
 });
 let conteoDelPuntaje = 0;
 function calcularAñosDeExperiencia() {
@@ -22,4 +23,9 @@ function casoEmergencia() {
 function experienciaConMaterialRadiactivo(){
     if(document.getElementById("material-radiactivo").checked) conteoDelPuntaje += 10;
     console.log(`total con experiencia: ${conteoDelPuntaje}`)
+}
+function comerDonas(){
+    const donasComidas = document.getElementById("donas").value;
+    conteoDelPuntaje -= donasComidas
+    console.log(`total excluyendo las donas comidas ${conteoDelPuntaje}`)
 }
