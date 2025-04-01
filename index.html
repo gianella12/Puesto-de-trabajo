@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="get">
+    <section id="seccion-experiencia">
+        <fieldset>
+            <label for="experiencia">Ingresa cuantos años de experiencia tienes en formato de meses.</label>
+            <input type="number" id="experiencia">            
+    </fieldset>  
+    </section>
+    <section id="seccion-caso-emergencia">
+        <fieldset>
+            <legend>¿Qué harías en un caso de emergencia?</legend>
+            <label><input type="checkbox" name="emergencia" id="protocolo"> Activar el protocolo de seguridad</label><br>
+            <label><input type="checkbox" name="emergencia" id="correr"> Correr</label><br>
+            <label><input type="checkbox" name="emergencia" id="saltar"> Saltar del piso 9° a la pileta</label><br>
+            <label><input type="checkbox" name="emergencia" id="dormir"> Seguir durmiendo</label>
+        </fieldset>        
+    </section>
+    <section id="seccion-material-radiactivo">
+        <fieldset>
+         <legend>¿Trabajaste con material radiactivo?</legend>
+         <span>Si</span>
+         <input type="checkbox" />
+         <span>No</span>
+         <input type="checkbox"/>
+        </fieldset>  
+    <section id="seccion-donas">
+        <fieldset>
+            <span>Ingresa cuantas donas te comerias</span>
+            <input type="number">
+        </fieldset>
+    </section>
+    <button type="submit">Enviar</button>
+</form>
+</body>
+<script src="./index.js"></script>
+</html>
